@@ -8,12 +8,12 @@ public class IndexModel : PageModel
   private readonly ILogger<IndexModel> _logger;
 
   [BindProperty]
-  public double FirstNumber { get; set; }
+  public string FirstNumber { get; set; }
   [BindProperty]
-  public double SecondNumber { get; set; }
+  public string SecondNumber { get; set; }
 
   [BindProperty]
-  public double ThirdNumber { get; set; }
+  public string ThirdNumber { get; set; }
 
   public IndexModel(ILogger<IndexModel> logger)
   {
