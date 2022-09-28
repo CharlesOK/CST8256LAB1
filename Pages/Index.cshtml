@@ -7,5 +7,21 @@
 <div class="text-center">
     <h1 class="display-4">Statistics</h1>
     <p>Enter one, two or three numerical numbers and click the calculate button to get their statistics</p>
+    <form method="post" class="col-4">
+        <div class="form-group row mb-3">
+            <label asp-for="FirstNumber" class=" col-4 col-form"></label>
+            <input asp-for="FirstNumber" class="col form-control" default="" />
+        </div>
+        <div class="form-group row mb-3">
+            <label asp-for="SecondNumber" class="col-4"></label>
+            <input asp-for="SecondNumber" class="col form-control" default="" />
+
+        </div>
+        <div class="form-group row mb-3">
+            <label asp-for="ThirdNumber" class=" col-4 col-form"></label>
+            <input asp-for="ThirdNumber" class="col form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary">Calculate</button>
+    </form>
 
 </div>
