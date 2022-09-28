@@ -1,0 +1,21 @@
+.btn {
+  border-radius:  10px;
+}
+
+
+.intro {
+  text-align: center;
+}
+
+.result {
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+}
+
+div {
+
+  text-align: left;
+  margin: 10px;
+}
+ 
