@@ -6,7 +6,8 @@
 
 <div class="text-center">
     <h1 class="display-4">Statistics</h1>
-    <p>Enter one, two or three numerical numbers and click the calculate button to get their statistics</p>
+    <p class="intro">Enter one, two or three numerical numbers and click the calculate button to get their statistics
+    </p>
     <form method="post" class="col-4">
         <div class="form-group row mb-3">
             <label asp-for="FirstNumber" class=" col-4 col-form"></label>
@@ -23,5 +24,44 @@
         </div>
         <button type="submit" class="btn btn-primary">Calculate</button>
     </form>
+
+    @{
+        if (Model.Display)
+        {
+            <p class="result">You entered @(Model.Count) numbers. The following are their statistics</p>
+
+
+            <div>
+                <span>Maximum: </span>
+                <span class="col fw-bold">@Model.Max</span>
+            </div>
+
+            <div>
+                <span>Minimum: </span>
+                <span class="col fw-bold">@Model.Min</span>
+
+            </div>
+
+            <div>
+                <span>Total: </span>
+                <span class="col fw-bold">@Model.Total</span>
+            </div>
+
+            <div>
+                <span>Average: </span>
+                <span class="col fw-bold">@Model.Average</span>
+            </div>
+
+
+
+        }
+        else if (Model.ErrorMessage != "")
+        {
+            <p>@Model.ErrorMessage</p>
+        }
+    }
+
+
+
 
 </div>
